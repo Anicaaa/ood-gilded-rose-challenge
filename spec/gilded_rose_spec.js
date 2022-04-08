@@ -14,4 +14,12 @@ describe('Gilded Rose', function () {
     expect(items[0].name).toEqual('foo')
     expect(items[0].quality).toEqual(0)
   })
+
+  it('aged brie should increase quality', function () {
+    const gildedRose = new Shop([new Item('Aged Brie', 2, 1)])
+    const items = gildedRose.updateQuality()
+    expect(items[0].name).toEqual('Aged Brie')
+    expect(items[0].sellIn).toEqual(1)
+    expect(items[0].quality).toEqual(2)
+  })
 })
