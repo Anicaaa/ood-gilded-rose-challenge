@@ -1,4 +1,6 @@
-var { Shop, Item } = require('../src/gilded_rose.js')
+const Shop = require('../src/shop.js')
+const Item = require('../src/item.js')
+
 describe('Gilded Rose', function () {
   // item has name, sellIn, quality
   it('should have quality always greater or equal to zero', function () {
